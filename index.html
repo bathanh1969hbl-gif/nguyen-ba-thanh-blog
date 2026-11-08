@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyễn Bá Thành | Sống Khỏe Sống Hạnh Phúc - Tuổi 58 Đầy Năng Lượng</title>
+  <meta name="description" content="Hành trình 18 năm chạy bộ & đạp xe, câu chuyện sáng Mùng Một Tết trên đường Lê Văn Khương và cột mốc chinh phục Full Marathon 42km ở tuổi 58 của Nguyễn Bá Thành." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-soft: #111827;
+      --card: #1e293b;
+      --card-hover: #26354d;
+      --accent: #f59e0b;
+      --accent-2: #10b981;
+      --accent-blue: #38bdf8;
+      --text: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(11, 17, 32, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 2rem;
+    }
+    .nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+    .brand-badge {
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      color: #0b1120;
+      font-weight: 800;
+      padding: 0.25rem 0.65rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding: 7rem 2rem 4rem;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.16), transparent 45%),
+        radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.14), transparent 45%),
+        linear-gradient(180deg, #0b1120 0%, #0f172a 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: var(--accent);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+      line-height: 1.18;
+      margin-bottom: 1.25rem;
+      color: #ffffff;
+    }
+    .hero h1 span {
+      background: linear-gradient(90deg, #fbbf24, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-lead {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 620px;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.2rem;
+    }
+    .stat-box {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      border-radius: 14px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.2;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      color: #0b1120;
+      font-weight: 700;
+      padding: 0.9rem 1.75rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.25);
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-weight: 600;
+      padding: 0.9rem 1.6rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.12); }
+
+    .hero-media {
+      position: relative;
+    }
+    .hero-img-card {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 2px solid rgba(245, 158, 11, 0.35);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+    .hero-img-card img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-img-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(to top, rgba(11, 17, 32, 0.95), transparent);
+      font-size: 0.92rem;
+      color: #f8fafc;
+    }
+
+    /* Story Section */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .story-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.65) 0%, rgba(15, 23, 42, 0.85) 100%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: clamp(1.75rem, 4vw, 3.75rem);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+    .story-header {
+      text-align: center;
+      margin-bottom: 2.75rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .story-eyebrow {
+      color: var(--accent-2);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+    .story-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.65rem);
+      line-height: 1.25;
+      color: #ffffff;
+    }
+    .story-body p {
+      font-size: 1.12rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.4rem;
+    }
+    .story-body strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .story-quote {
+      margin: 2.2rem 0;
+      padding: 1.6rem 2rem;
+      background: rgba(245, 158, 11, 0.1);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 16px 16px 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      color: #fde68a;
+    }
+    .story-inline-media {
+      margin: 2.4rem 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .story-inline-media figure {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .story-inline-media img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .story-inline-media img:hover { transform: scale(1.03); }
+    .story-inline-media figcaption {
+      padding: 0.85rem 1rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    .distance-pills {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+    .distance-pill {
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #6ee7b7;
+      padding: 0.55rem 1.2rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .hashtag-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 2.5rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .hashtag {
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent-blue);
+      padding: 0.4rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* Milestones Grid */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-heading h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin-bottom: 0.6rem;
+    }
+    .section-heading p {
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .milestone-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .milestone-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .milestone-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+    .milestone-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .milestone-content {
+      padding: 1.4rem;
+    }
+    .milestone-date {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .milestone-content h3 {
+      font-size: 1.2rem;
+      margin: 0.4rem 0 0.6rem;
+    }
+    .milestone-content p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* Filterable Full Photo Gallery */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.2rem;
+    }
+    .filter-btn {
+      background: var(--card);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      padding: 0.55rem 1.15rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--accent);
+      color: #0b1120;
+      border-color: var(--accent);
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.1rem;
+    }
+    .photo-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+    }
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s;
+      display: block;
+    }
+    .photo-item:hover img { transform: scale(1.06); }
+    .photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(11,17,32,0.9) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0.85rem;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .photo-item:hover .photo-overlay { opacity: 1; }
+    .photo-cat {
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .photo-date {
+      font-size: 0.85rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Interactive Comment / Commitment Box */
+    .comment-box {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+    .comment-form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .comment-form input, .comment-form textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.9rem 1.1rem;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 0.98rem;
+    }
+    .comment-list {
+      margin-top: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .comment-item {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--border);
+      padding: 1.1rem 1.35rem;
+      border-radius: 14px;
+    }
+    .comment-author {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+    .comment-text {
+      color: var(--text-secondary);
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 8, 17, 0.94);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 85vh;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      background: var(--card);
+      color: #fff;
+      border: 1px solid var(--border);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-badge">58 TUỔI</span>
+        <span>NGUYỄN BÁ THÀNH</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#cau-chuyen">Câu Chuyện Mùng Một Tết</a></li>
+        <li><a href="#cot-moc">Hành Trình & Cột Mốc</a></li>
+        <li><a href="#thu-vien">Thư Viện Ảnh (<span id="nav-photo-count">160+</span>)</a></li>
+        <li><a href="#chia-se">Chia Sẻ Cùng Tôi</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-tag">🏃‍♂️ Hành Trình Sống Khỏe • Sống Hạnh Phúc</div>
+        <h1>Mùng Một Tết, Tôi Đã Làm Một Việc <span>Chưa Từng Làm Trong Đời</span></h1>
+        <p class="hero-lead">
+          Ở tuổi 58, sau 18 năm chạy bộ và đạp xe, tôi thấm thía rằng: Sức khỏe không được tạo nên từ một ngày tập thật nhiều, mà từ những ngày chúng ta vẫn tiếp tục dù chỉ làm được một chút.
+        </p>
+
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-num">58</div>
+            <div class="stat-label">Tuổi Đầy Năng Lượng</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">18 Năm</div>
+            <div class="stat-label">Chạy Bộ & Đạp Xe</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">42 KM</div>
+            <div class="stat-label">Full Marathon Cam Ranh</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">5:00 AM</div>
+            <div class="stat-label">Mùng Một Tết Khởi Đầu</div>
+          </div>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#cau-chuyen" class="btn-primary">Đọc Câu Chuyện Của Tôi →</a>
+          <a href="#thu-vien" class="btn-secondary">Xem Toàn Bộ Thư Viện Hình Ảnh</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-img-card">
+          <img src="images/hero-finish.jpg" alt="Nguyễn Bá Thành tại vạch đích VnExpress Marathon" onclick="openLightbox(this.src)" />
+          <div class="hero-img-caption">
+            <strong>Nguyễn Bá Thành</strong> — Chinh phục đường chạy Marathon với tinh thần bền bỉ mỗi ngày.
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN STORY -->
+  <section class="section" id="cau-chuyen">
+    <article class="story-container">
+      <div class="story-header">
+        <div class="story-eyebrow">Tự Truyện & Truyền Cảm Hứng</div>
+        <h2 class="story-title">MÙNG MỘT TẾT, TÔI ĐÃ LÀM MỘT VIỆC CHƯA TỪNG LÀM TRONG ĐỜI</h2>
+      </div>
+
+      <div class="story-body">
+        <p>Mùng Một Tết năm nay, khi nhiều gia đình đang chuẩn bị quần áo đẹp, trà bánh và những lời chúc đầu năm, tôi lại đưa ra một quyết định rất khác:</p>
+
+        <div class="story-quote">
+          “5 giờ sáng, tôi xỏ giày và chạy bộ trên đường Lê Văn Khương.”
+        </div>
+
+        <p>Đó là lần đầu tiên trong đời tôi bắt đầu năm mới theo cách này.</p>
+
+        <p>Ngoài đường lúc ấy vẫn còn khá yên tĩnh. Không khí buổi sáng đầu năm thật đặc biệt. Trong khi mọi người chuẩn bị đi chúc Tết hoặc đón những vị khách đầu tiên đến nhà, tôi mặc áo thun, mang giày chạy và một mình tiến về phía trước.</p>
+
+        <p>Trên đường, nhiều người nhìn tôi bằng ánh mắt có phần ngạc nhiên, thậm chí nghi hoặc. Có lẽ họ đang tự hỏi: <em>“Ngày Mùng Một Tết mà cũng đi chạy sao?”</em></p>
+
+        <div class="story-inline-media">
+          <figure>
+            <img src="images/early-morning-start.jpg" alt="Khởi đầu từ lúc rạng sáng" onclick="openLightbox(this.src)" />
+            <figcaption>Quyết tâm xuất phát từ khi trời còn tối</figcaption>
+          </figure>
+          <figure>
+            <img src="images/morning-run-friends.jpg" alt="Chạy bộ buổi sáng cùng những người bạn" onclick="openLightbox(this.src)" />
+            <figcaption>Niềm vui trên những cung đường buổi sớm</figcaption>
+          </figure>
+        </div>
+
+        <p>Thú thật, trong tôi lúc ấy cũng có một cảm giác rất lạ. Bởi đây là điều tôi chưa từng làm. Trên cung đường hôm ấy, tôi có cảm giác dường như chỉ có một mình mình đang chạy.</p>
+
+        <p><strong>Nhưng tôi vẫn tiếp tục.</strong></p>
+
+        <p>Từng bước chân đưa tôi đi qua sự ngại ngùng, vượt qua ánh mắt của người khác và chiến thắng tiếng nói bên trong mình: <em>“Hôm nay là Tết, nghỉ một ngày cũng có sao đâu!”</em></p>
+
+        <p><strong>Cuối cùng, tôi hoàn thành hơn 10km.</strong></p>
+
+        <p>Điều đáng nhớ nhất không phải là con số 10km. Điều khiến tôi vui nhất là tôi đã chiến thắng được cảm giác e ngại khi làm một việc mình chưa từng làm.</p>
+
+        <p>Tôi nhận ra rằng có những thay đổi lớn trong cuộc đời không bắt đầu bằng một kế hoạch thật hoành tráng. Nó có thể bắt đầu từ một quyết định rất nhỏ:</p>
+
+        <div class="story-quote">
+          “Xỏ giày vào và bước ra khỏi nhà.”
+        </div>
+
+        <p>Từ buổi sáng Mùng Một Tết ấy, tôi tiếp tục duy trì việc chạy bộ. Có ngày cơ thể khỏe khoắn, tinh thần hào hứng. Nhưng cũng có ngày trời mưa, người mệt hoặc xuất hiện một lý do khiến tôi chỉ muốn ở nhà.</p>
+
+        <p>Những ngày như vậy, tôi không ép mình phải chạy thật xa:</p>
+
+        <div class="distance-pills">
+          <span class="distance-pill">✓ Có thể chỉ là 1km</span>
+          <span class="distance-pill">✓ Có thể là 3km</span>
+          <span class="distance-pill">✓ Cũng có thể là 5km hoặc 7km</span>
+        </div>
+
+        <p>Khoảng cách không phải lúc nào cũng quan trọng. Quan trọng là tôi vẫn xỏ giày, vẫn lên đường và hoàn thành điều mình đã cam kết với bản thân. Từng bước chân nhỏ bé ấy đã góp lại thành một kết quả mà trước đây tôi từng nghĩ là rất khó khăn.</p>
+
+        <p><strong>Tháng Bảy vừa rồi, tôi đã hoàn thành cự ly marathon 42km tại Cam Ranh cùng những người bạn.</strong></p>
+
+        <div class="story-inline-media">
+          <figure>
+            <img src="images/marathon-team.jpg" alt="Cùng đồng đội chinh phục giải chạy Marathon" onclick="openLightbox(this.src)" />
+            <figcaption>Sát cánh cùng những người bạn đồng hành trên đường chạy</figcaption>
+          </figure>
+          <figure>
+            <img src="images/cam-ranh-sunrise.jpg" alt="Khoảnh khắc đáng nhớ tại giải chạy" onclick="openLightbox(this.src)" />
+            <figcaption>Chinh phục thử thách bằng sự kiên trì mỗi ngày</figcaption>
+          </figure>
+        </div>
+
+        <p>Khi về đích, tôi nhớ đến buổi sáng Mùng Một Tết trên đường Lê Văn Khương. Nếu ngày hôm đó tôi chọn ngủ thêm, chọn trì hoãn hoặc ngại ánh mắt của người khác, có lẽ hành trình của tôi đã rất khác.</p>
+
+        <p>Ở tuổi 58, sau 18 năm chạy bộ và đạp xe, tôi càng thấm thía một điều:</p>
+
+        <div class="story-quote">
+          “Sức khỏe không được tạo nên từ một ngày tập thật nhiều, mà từ những ngày chúng ta vẫn tiếp tục dù chỉ làm được một chút.”
+        </div>
+
+        <p>Nếu bạn đang ở tuổi 40, 50 hay 60 và muốn thay đổi sức khỏe, đừng vội đặt ra một mục tiêu quá lớn. Hãy bắt đầu bằng việc đi bộ hoặc chạy 1km. Ngày mai, hãy tiếp tục thêm một lần nữa.</p>
+
+        <p>Đừng chờ đến khi có đủ thời gian, đủ động lực hay đủ điều kiện. Đôi khi, chỉ cần xỏ giày và bước ra khỏi cửa, bạn đã chiến thắng chính mình rồi.</p>
+
+        <p><strong>Nếu chọn một việc nhỏ để bắt đầu thay đổi sức khỏe ngay từ ngày mai, bạn sẽ chọn làm gì? Hãy chia sẻ cùng tôi ở phần bình luận bên dưới nhé!</strong></p>
+
+        <div class="hashtag-bar">
+          <span class="hashtag">#NguyễnBáThành</span>
+          <span class="hashtag">#SốngKhỏeSốngHạnhPhúc</span>
+          <span class="hashtag">#ChạyBộMỗiNgày</span>
+          <span class="hashtag">#Tuổi58ĐầyNăngLượng</span>
+          <span class="hashtag">#KhôngBaoGiờLàQuáMuộn</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- MILESTONES -->
+  <section class="section" id="cot-moc">
+    <div class="section-heading">
+      <h2>Những Dấu Ấn Trên Hành Trình</h2>
+      <p>Từ những buổi sáng tinh mơ một mình trên đường vắng đến những cung đường biển rực nắng cùng gia đình và đồng đội.</p>
+    </div>
+
+    <div class="milestone-grid">
+      <div class="milestone-card">
+        <img src="images/early-morning-start.jpg" alt="Khởi đầu 5 giờ sáng" onclick="openLightbox(this.src)" />
+        <div class="milestone-content">
+          <div class="milestone-date">Mùng 1 Tết • 05:00 Sáng</div>
+          <h3>Hơn 10km Đầu Năm Trên Đường Lê Văn Khương</h3>
+          <p>Bước qua sự e ngại và ánh nhìn ngạc nhiên để tạo nên khởi đầu hoàn toàn mới cho năm mới.</p>
+        </div>
+      </div>
+
+      <div class="milestone-card">
+        <img src="images/marathon-team.jpg" alt="VnExpress Marathon Cần Giờ" onclick="openLightbox(this.src)" />
+        <div class="milestone-content">
+          <div class="milestone-date">Tháng 05/2026 • Cần Giờ</div>
+          <h3>Trạm Dấu Ấn Bản Lĩnh Cùng Đồng Đội</h3>
+          <p>Hòa mình vào không khí sôi động tại VnExpress Marathon Green Paradise Cần Giờ cùng những người bạn.</p>
+        </div>
+      </div>
+
+      <div class="milestone-card">
+        <img src="images/coastal-journey.jpg" alt="Full Marathon 42km Cam Ranh" onclick="openLightbox(this.src)" />
+        <div class="milestone-content">
+          <div class="milestone-date">Tháng 07/2026 • Cam Ranh</div>
+          <h3>Chinh Phục Full Marathon 42KM</h3>
+          <p>Trái ngọt từ kỷ luật 1km, 3km, 5km mỗi ngày — hoàn thành cự ly 42km tại vùng biển Cam Ranh.</p>
+        </div>
+      </div>
+
+      <div class="milestone-card">
+        <img src="images/family-gathering.jpg" alt="Gia đình và Cuộc sống" onclick="openLightbox(this.src)" />
+        <div class="milestone-content">
+          <div class="milestone-date">Tuổi 58 • 18 Năm Bền Bỉ</div>
+          <h3>Sống Khỏe Để Tận Hưởng Hạnh Phúc</h3>
+          <p>Năng lượng tích cực bên gia đình, người thân và những chuyến đi khám phá khắp mọi miền đất nước.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL PHOTO GALLERY -->
+  <section class="section" id="thu-vien">
+    <div class="section-heading">
+      <h2>Thư Viện Hình Ảnh Hành Trình</h2>
+      <p>Toàn bộ khoảnh khắc luyện tập, thi đấu marathon, khám phá thiên nhiên và cuộc sống thường nhật từ dữ liệu cá nhân.</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">Tất Cả Hình Ảnh</button>
+      <button class="filter-btn" onclick="filterGallery('camranh', this)">Marathon 42km Cam Ranh & Tháng 7</button>
+      <button class="filter-btn" onclick="filterGallery('cangio', this)">Marathon Cần Giờ & Tháng 5</button>
+      <button class="filter-btn" onclick="filterGallery('training', this)">Luyện Tập & Khởi Động</button>
+      <button class="filter-btn" onclick="filterGallery('daily', this)">Rèn Luyện Tháng 6</button>
+      <button class="filter-btn" onclick="filterGallery('lifestyle', this)">Tuổi 58 Đầy Năng Lượng</button>
+    </div>
+
+    <div class="photo-grid" id="gallery-grid"></div>
+  </section>
+
+  <!-- INTERACTIVE SHARING / COMMENTS -->
+  <section class="section" id="chia-se">
+    <div class="comment-box">
+      <h2 style="font-family: 'Playfair Display', serif; font-size: 1.85rem; margin-bottom: 0.5rem;">
+        Chia Sẻ Cam Kết Nhỏ Của Bạn Ngay Hôm Nay
+      </h2>
+      <p style="color: var(--muted);">
+        “Nếu chọn một việc nhỏ để bắt đầu thay đổi sức khỏe ngay từ ngày mai, bạn sẽ chọn làm gì? Hãy chia sẻ cùng tôi ở phần bình luận nhé!”
+      </p>
+
+      <form class="comment-form" onsubmit="addComment(event)">
+        <input type="text" id="c-name" placeholder="Tên của bạn (ví dụ: Anh Minh - 52 tuổi)" required />
+        <textarea id="c-text" rows="3" placeholder="Việc nhỏ tôi chọn bắt đầu từ ngày mai là: Xỏ giày đi bộ 1km lúc 5h30 sáng..." required></textarea>
+        <button type="submit" class="btn-primary" style="border: none; cursor: pointer; justify-self: start;">
+          Gửi Chia Sẻ Cùng Nguyễn Bá Thành
+        </button>
+      </form>
+
+      <div class="comment-list" id="comment-list">
+        <div class="comment-item">
+          <div class="comment-author">Nguyễn Bá Thành (Tác giả)</div>
+          <div class="comment-text">Chào mừng bạn đến với trang cá nhân của tôi! Đừng chờ đến khi có đủ thời gian hay điều kiện — hãy bắt đầu từ 1km đầu tiên ngay ngày mai nhé!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="Xem ảnh phóng to" />
+  </div>
+
+  <footer>
+    <p>© 2026 <strong>Nguyễn Bá Thành</strong> • #SốngKhỏeSốngHạnhPhúc #ChạyBộMỗiNgày #Tuổi58ĐầyNăngLượng #KhôngBaoGiờLàQuáMuộn</p>
+  </footer>
+
+  <script src="gallery-data.js"></script>
+  <script>
+    const CAT_LABELS = {
+      training: "Luyện Tập & Khám Phá",
+      cangio: "Marathon Cần Giờ & Gia Đình",
+      daily: "Kỷ Luật Mỗi Ngày",
+      camranh: "Marathon 42km Cam Ranh & Hành Trình",
+      lifestyle: "Tuổi 58 Đầy Năng Lượng",
+      journey: "Hành Trình Sống Khỏe"
+    };
+
+    function renderGallery(filterKey = 'all') {
+      const grid = document.getElementById('gallery-grid');
+      const items = (window.GALLERY_DATA || []).filter(item => filterKey === 'all' || item.catKey === filterKey);
+      const countEl = document.getElementById('nav-photo-count');
+      if (countEl && window.GALLERY_DATA) {
+        countEl.textContent = window.GALLERY_DATA.length;
+      }
+
+      grid.innerHTML = items.map(item => `
+        <div class="photo-item" onclick="openLightbox('${item.src}')">
+          <img src="${item.src}" loading="lazy" alt="${CAT_LABELS[item.catKey] || 'Hành trình'} - ${item.date}" />
+          <div class="photo-overlay">
+            <span class="photo-cat">${CAT_LABELS[item.catKey] || 'Hành trình'}</span>
+            <span class="photo-date">${item.date}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterGallery(key, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderGallery(key);
+    }
+
+    function openLightbox(src) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lb.classList.add('open');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+
+    function addComment(e) {
+      e.preventDefault();
+      const name = document.getElementById('c-name').value.trim();
+      const text = document.getElementById('c-text').value.trim();
+      if (!name || !text) return;
+      const saved = JSON.parse(localStorage.getItem('nbt_comments') || '[]');
+      saved.unshift({ name, text, date: new Date().toLocaleDateString('vi-VN') });
+      localStorage.setItem('nbt_comments', JSON.stringify(saved));
+      document.getElementById('c-name').value = '';
+      document.getElementById('c-text').value = '';
+      loadComments();
+    }
+
+    function loadComments() {
+      const saved = JSON.parse(localStorage.getItem('nbt_comments') || '[]');
+      const list = document.getElementById('comment-list');
+      const defaultHtml = `
+        <div class="comment-item">
+          <div class="comment-author">Nguyễn Bá Thành (Tác giả)</div>
+          <div class="comment-text">Chào mừng bạn đến với trang cá nhân của tôi! Đừng chờ đến khi có đủ thời gian hay điều kiện — hãy bắt đầu từ 1km đầu tiên ngay ngày mai nhé!</div>
+        </div>`;
+      list.innerHTML = saved.map(c => `
+        <div class="comment-item">
+          <div class="comment-author">${c.name} <span style="color:var(--muted);font-weight:400;font-size:0.8rem;">• ${c.date}</span></div>
+          <div class="comment-text">${c.text}</div>
+        </div>
+      `).join('') + defaultHtml;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderGallery('all');
+      loadComments();
+    });
+  </script>
+</body>
+</html>
